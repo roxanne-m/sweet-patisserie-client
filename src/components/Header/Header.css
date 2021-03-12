@@ -1,0 +1,23 @@
+.header-styling {
+  font-family: 'Baskervville', serif;
+}
+
+nav,
+.username-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  border: 2px solid none;
+  border-radius: 25px;
+  background-color: #bde0fe;
+  padding: 15px;
+  margin: 25px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 25px;
+  padding: 25px;
+}

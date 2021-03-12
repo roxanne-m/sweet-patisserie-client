@@ -1,0 +1,48 @@
+/* Button and background image style */
+.button-style {
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.container,
+img {
+  width: 100%;
+  height: auto;
+}
+
+img {
+  opacity: 0.85;
+}
+
+.get-started-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -250%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  background-color: #0096c7;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+}
+
+.about-styling {
+  text-align: center;
+}

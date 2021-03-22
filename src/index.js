@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './components/App/App';
 import { UserProvider } from './contexts/UserContext';
+import { DashboardProvider } from './contexts/DashboardContext';
 import Footer from '../src/components/Footer/Footer';
 import './index.css';
 
@@ -11,7 +12,9 @@ const routing = (
     <div className='content-wrap'>
       <BrowserRouter>
         <UserProvider>
-          <App />
+          <DashboardProvider>
+            <App />
+          </DashboardProvider>
         </UserProvider>
       </BrowserRouter>
     </div>
@@ -19,8 +22,4 @@ const routing = (
   </div>
 );
 
-ReactDOM.render(
-  routing,
-
-  document.getElementById('root')
-);
+ReactDOM.render(routing, document.getElementById('root'));

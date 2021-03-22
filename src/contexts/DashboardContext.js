@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 const DashboardContext = React.createContext({
   error: null,
-  recipes: {},
+  recipes: [],
   response: [],
   setError: () => {},
+  clearError: () => {},
   setRecipes: () => {},
   setResponse: () => {},
 });
@@ -14,7 +15,7 @@ export default DashboardContext;
 export class DashboardProvider extends Component {
   state = {
     error: null,
-    recipes: {},
+    recipes: [],
     response: {},
   };
 
@@ -39,9 +40,11 @@ export class DashboardProvider extends Component {
       recipes: this.state.recipes,
       response: this.state.response,
       setError: this.setError,
+      clearError: this.clearError,
       setRecipes: this.setRecipes,
       setResponse: this.setResponse,
     };
+
     return (
       <DashboardContext.Provider value={value}>
         {this.props.children}

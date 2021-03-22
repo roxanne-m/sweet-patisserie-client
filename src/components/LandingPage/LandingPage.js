@@ -13,14 +13,14 @@ class LandingPage extends Component {
             src={pastryPhoto}
             alt='Holding a pastry in front of a pastry shop'
           />
-          <div class='button-style'>
+          <div className='button-style'>
             <Link to='/register'>
-              <button class='get-started-button'>Get Started</button>
+              <button className='get-started-button'>Get Started</button>
             </Link>
           </div>
         </div>
-        <div class='group'>
-          <div class='item'>
+        <div className='group'>
+          <div className='item'>
             <h2 className='about-styling'>About Sweet Patisserie</h2>
             <p>
               Sweet Patisserie was created for users who find joy and are caught

@@ -37,7 +37,7 @@ class Header extends Component {
     return (
       <header className='header-styling'>
         <h1>
-          <Link to='/'>Sweet Patisserie</Link>
+          <Link to='/dashboard'>Sweet Patisserie</Link>
         </h1>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()

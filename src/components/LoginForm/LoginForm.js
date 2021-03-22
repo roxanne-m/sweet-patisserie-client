@@ -3,7 +3,6 @@ import { Input, Label } from '../Form/Form';
 import AuthApiService from '../../services/auth-api-service';
 import UserContext from '../../contexts/UserContext';
 import Button from '../Button/Button';
-
 class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => {},
@@ -24,9 +23,14 @@ class LoginForm extends Component {
     AuthApiService.postLogin({
       username: username.value,
       password: password.value,
-    }).catch((res) => {
-      this.setState({ error: res.error });
-    });
+    })
+      .then((data) => {
+        return this.context.processLogin(data.authToken);
+      })
+      .then(this.props.onLoginSuccess)
+      .catch((res) => {
+        this.setState({ error: res.error });
+      });
   };
 
   componentDidMount() {

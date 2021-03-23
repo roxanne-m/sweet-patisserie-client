@@ -12,13 +12,12 @@ class DashboardRoute extends Component {
     this.context.clearError();
     SavedRecipesApiService.getRecipes().then((res) => {
       this.context.setRecipes(res);
-      console.log(res, 'RES ');
     });
   }
-  handleDeleteSubmit = (e) => {
+  handleDeleteSubmit = (e, recipeId) => {
     e.preventDefault();
-    SavedRecipesApiService.deleteRecipe().then((res) => {
-      this.context.setRecipes(res);
+    SavedRecipesApiService.deleteRecipe(recipeId).then((res) => {
+      this.context.deleteRecipe(recipeId);
     });
   };
 
@@ -26,23 +25,29 @@ class DashboardRoute extends Component {
     const recipesArray = this.context.recipes.map((recipe) => {
       return (
         <li className='recipe-list-style' key={recipe.id}>
-          <h4>{recipe.title}</h4>
+          <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
+            <h3>
+              <u>{recipe.title}</u>
+            </h3>
+          </Link>
+          <p>{recipe.description}</p>
 
           <br />
-          <button type='submit'>Delete Recipe</button>
+          <button onClick={(e) => this.handleDeleteSubmit(e, recipe.id)}>
+            Delete Recipe
+          </button>
         </li>
       );
     });
-    console.log(recipesArray, 'RECIPES ARRAY');
-
     return (
       <div>
         <Link to='/add-recipe'>
           <Button>Add Recipe</Button>
         </Link>
         <h2>Recipe Dashboard</h2>
-
-        <ul>{recipesArray}</ul>
+        <section>
+          <ul>{recipesArray}</ul>
+        </section>
       </div>
     );
   }

@@ -37,7 +37,10 @@ class App extends Component {
             <PublicOnlyRoute path={'/login'} component={LoginRoute} />
 
             <PrivateRoute path={'/dashboard'} component={DashboardRoute} />
-            <PrivateRoute path={'/recipe'} component={SpecificRecipeRoute} />
+            <PrivateRoute
+              path={'/recipe/:id'}
+              component={SpecificRecipeRoute}
+            />
             <PrivateRoute path={'/add-recipe'} component={AddRecipeRoute} />
             <Route component={NotFoundRoute} />
           </Switch>

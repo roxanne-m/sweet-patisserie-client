@@ -4,10 +4,13 @@ const DashboardContext = React.createContext({
   error: null,
   recipes: [],
   response: [],
+  completeRecipe: [],
   setError: () => {},
   clearError: () => {},
   setRecipes: () => {},
   setResponse: () => {},
+  deleteRecipe: () => {},
+  setCompleteRecipe: () => {},
 });
 
 export default DashboardContext;
@@ -17,6 +20,7 @@ export class DashboardProvider extends Component {
     error: null,
     recipes: [],
     response: {},
+    completeRecipe: [],
   };
 
   setError = (error) => {
@@ -34,15 +38,28 @@ export class DashboardProvider extends Component {
   setResponse = (response) => {
     this.setState({ response });
   };
+
+  deleteRecipe = (recipeId) => {
+    this.setRecipes(
+      this.state.recipes.filter((recipe) => recipe.id !== recipeId)
+    );
+  };
+
+  setCompleteRecipe = (completeRecipe) => {
+    this.setState({ completeRecipe });
+  };
   render() {
     const value = {
       error: this.state.error,
       recipes: this.state.recipes,
       response: this.state.response,
+      completeRecipe: this.state.completeRecipe,
       setError: this.setError,
       clearError: this.clearError,
       setRecipes: this.setRecipes,
       setResponse: this.setResponse,
+      deleteRecipe: this.deleteRecipe,
+      setCompleteRecipe: this.setCompleteRecipe,
     };
 
     return (

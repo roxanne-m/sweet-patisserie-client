@@ -46,3 +46,7 @@ img {
 .about-styling {
   text-align: center;
 }
+
+img{
+  border-radius: 20px;
+}

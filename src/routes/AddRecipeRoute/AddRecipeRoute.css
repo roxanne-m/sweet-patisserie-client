@@ -1,0 +1,18 @@
+.add-recipe-button{
+    color: white;
+  background-color: green;
+  font-size: 12px;
+  padding: 8px 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.input-form-styling{
+    border-radius:8px;
+}
+
+.textarea-form-styling{
+    border-radius: 12px;
+}

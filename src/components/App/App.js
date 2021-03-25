@@ -24,7 +24,7 @@ class App extends Component {
 
   render() {
     const { hasError } = this.state;
-    console.log('');
+    // console.log('');
     return (
       <div>
         <Header />

@@ -4,7 +4,7 @@ const DashboardContext = React.createContext({
   error: null,
   recipes: [],
   response: [],
-  completeRecipe: [],
+  completeRecipe: {},
   setError: () => {},
   clearError: () => {},
   setRecipes: () => {},
@@ -20,7 +20,7 @@ export class DashboardProvider extends Component {
     error: null,
     recipes: [],
     response: {},
-    completeRecipe: [],
+    completeRecipe: {},
   };
 
   setError = (error) => {

@@ -13,14 +13,14 @@ const SavedRecipesApiService = {
     );
   },
   // Post request to post a new recipe
-  postRecipe(recipe) {
+  postRecipe(recipe, ingredients, instructions) {
     return fetch(`${config.API_ENDPOINT}/recipes/add`, {
       method: 'POST',
       headers: {
         authorization: `Bearer ${TokenService.getAuthToken()}`,
         'content-type': 'application/json',
       },
-      body: JSON.stringify({ recipe }),
+      body: JSON.stringify({ recipe, ingredients, instructions }),
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );

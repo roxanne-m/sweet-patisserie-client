@@ -16,11 +16,11 @@ class RegistrationRoute extends Component {
   render() {
     return (
       <section>
+        <h2>Sign up</h2>
         <p>
           Store your special recipes on Sweet Patisserie where the love lasts
           forever!
         </p>
-        <h2>Sign up</h2>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DashboardContext from '../../contexts/DashboardContext';
 import SavedRecipesApiService from '../../services/saved-recipes-api-service';
 import Button from '../../components/Button/Button';
+import { Link } from 'react-router-dom';
 import './AddRecipeRoute.css';
 
 class AddRecipeRoute extends Component {
@@ -78,6 +79,10 @@ class AddRecipeRoute extends Component {
 
     return (
       <div>
+        <Link to='/dashboard'>
+          <Button>Cancel</Button>
+        </Link>
+
         <h2>Add A New Recipe</h2>
         <section>
           <form onSubmit={(e) => this.handleSubmit(e)}>

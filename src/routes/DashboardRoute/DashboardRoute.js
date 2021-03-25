@@ -33,7 +33,10 @@ class DashboardRoute extends Component {
           <p>{recipe.description}</p>
 
           <br />
-          <button onClick={(e) => this.handleDeleteSubmit(e, recipe.id)}>
+          <button
+            className='delete-button'
+            onClick={(e) => this.handleDeleteSubmit(e, recipe.id)}
+          >
             Delete Recipe
           </button>
         </li>

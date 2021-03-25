@@ -50,3 +50,13 @@ img {
 img{
   border-radius: 20px;
 }
+
+
+/* Desktop Styling */
+@media all and (min-width: 800px) {
+  img {
+    width: 100%;
+    height: auto;
+   
+  }
+}

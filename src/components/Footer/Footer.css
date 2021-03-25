@@ -1,7 +1,8 @@
 /* FOOTER styling */
 footer {
   text-align: center;
-  background-color: #c9c9cf;
+  /* background-color: #c9c9cf; */
+  background-color: #d7e3fc;
   padding-top: 15px;
   position: absolute;
   bottom: 0;

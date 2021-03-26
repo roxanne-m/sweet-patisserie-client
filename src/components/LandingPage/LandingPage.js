@@ -41,6 +41,13 @@ class LandingPage extends Component {
               your ingredients, and enter the directions/steps; it's that
               simple!
             </p>
+
+            <p>
+              If you would like to try out the app, you can either register as a
+              new user or use the sample user below.
+            </p>
+            <p>Username: admin</p>
+            <p>Password: pass</p>
             <p>
               I hope you enjoy saving your recipes as much as others love to
               enjoy them.

@@ -20,5 +20,17 @@ h1 {
   text-align: center;
   margin: 25px;
   padding: 25px;
+  background-color: #fbc4ab;
+  border-radius: 20px;
 }
 
+
+/* Desktop Styling */
+@media all and (min-width: 800px) {
+  h1,nav,
+  .username-style {
+    
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}

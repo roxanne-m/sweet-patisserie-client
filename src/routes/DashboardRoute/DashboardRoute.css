@@ -1,19 +1,19 @@
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }
 
-li{
-    border: 2px solid none;
-    border-radius: 20px;
-    background-color: #ffc6cf;
-    /* background-color: #f7d6e0; */
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
+li {
+  border: 2px solid none;
+  border-radius: 20px;
+  background-color: #ffc6cf;
+  /* background-color: #f7d6e0; */
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
-.delete-button{
-    color: white;
+.delete-button {
+  color: white;
   background-color: red;
   font-size: 15px;
   padding: 8px 15px;
@@ -21,5 +21,36 @@ li{
   cursor: pointer;
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
-  float:inline-end;
+  float: inline-end;
+}
+
+/* Images */
+.dashboard-img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 450px;
+  border-radius: 20px;
+}
+
+/* Groups and items */
+.group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+@media all and (min-width: 800px) {
+  .group {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
+  .dashboard-img {
+    max-height: 300px;
+  }
 }

@@ -47,16 +47,14 @@ img {
   text-align: center;
 }
 
-img{
+.landing-page-photo {
   border-radius: 20px;
 }
 
-
 /* Desktop Styling */
 @media all and (min-width: 800px) {
-  img {
+  .landing-page-photo {
     width: 100%;
     height: auto;
-   
   }
 }

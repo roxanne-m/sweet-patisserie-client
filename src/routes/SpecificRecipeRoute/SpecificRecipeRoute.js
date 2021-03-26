@@ -45,7 +45,7 @@ class SpecificRecipeRoute extends Component {
         <br />
         <br />
         <section>
-          <fieldset>
+          <fieldset className='specific-recipe-style'>
             <h2>{this.context.completeRecipe.title}</h2>
             <fieldset className='description-style'>
               {this.context.completeRecipe.description}

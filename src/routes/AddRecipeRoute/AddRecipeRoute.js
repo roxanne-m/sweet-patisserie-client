@@ -70,11 +70,19 @@ class AddRecipeRoute extends Component {
   };
   render() {
     let listIngredients = this.state.ingredients.map((ingredient, index) => {
-      return <li key={index}>{ingredient}</li>;
+      return (
+        <li className='add-recipe-list' key={index}>
+          {ingredient}
+        </li>
+      );
     });
 
     let listInstructions = this.state.instructions.map((instruction, index) => {
-      return <li key={index}>{instruction}</li>;
+      return (
+        <li className='add-recipe-list' key={index}>
+          {instruction}
+        </li>
+      );
     });
 
     return (
@@ -85,69 +93,79 @@ class AddRecipeRoute extends Component {
 
         <h2>Add A New Recipe</h2>
         <section>
-          <form onSubmit={(e) => this.handleSubmit(e)}>
-            <label htmlFor='title'>Recipe Title: </label>
-            <br />
-            <input
-              className='input-form-styling'
-              type='text'
-              name='title'
-              value={this.state.title}
-              onChange={this.handleChange}
-              required
-            />
-            <br />
-            <label htmlFor='description'>Description: </label>
-            <br />
-            <textarea
-              className='textarea-form-styling'
-              name='description'
-              value={this.state.description}
-              onChange={this.handleChange}
-              rows='10'
-              cols='30'
-              placeholder='You may add an optional description for your recipe. E.g. (Nutritional facts, important notes, serving sizes, prep/cook time)'
-            />
-            <br />
-            <label htmlFor='ingredient'>Ingredients: </label>
-            <br />
-            <input
-              className='input-form-styling'
-              type='text'
-              name='ingredient'
-              value={this.state.ingredient}
-              onChange={this.handleChange}
-            />{' '}
-            <button
-              type='button'
-              onClick={this.handleAddIngredient}
-              className='add-recipe-button'
-            >
-              Add Ingredient
-            </button>
-            <ol>{listIngredients}</ol>
-            <br />
-            <label htmlFor='instruction'>Instructions: </label>
-            <br />
-            <input
-              className='input-form-styling'
-              type='text'
-              name='instruction'
-              value={this.state.instruction}
-              onChange={this.handleChange}
-            />{' '}
-            <button
-              type='button'
-              onClick={this.handleAddInstructions}
-              className='add-recipe-button'
-            >
-              Add Instruction
-            </button>
-            <ol>{listInstructions}</ol>
-            <br />
-            <br />
-            <Button type='submit'>Save Recipe</Button>
-          </form>
+          <fieldset className='add-recipe-form'>
+            <form onSubmit={(e) => this.handleSubmit(e)}>
+              <label htmlFor='title'>
+                <b>Recipe Title:</b>{' '}
+              </label>
+              <br />
+              <input
+                className='input-form-styling'
+                type='text'
+                name='title'
+                value={this.state.title}
+                onChange={this.handleChange}
+                required
+              />
+              <br />
+              <label htmlFor='description'>
+                <b>Description: </b>
+              </label>
+              <br />
+              <textarea
+                className='textarea-form-styling'
+                name='description'
+                value={this.state.description}
+                onChange={this.handleChange}
+                rows='10'
+                cols='30'
+                placeholder='You may add an optional description for your recipe. E.g. (Nutritional facts, important notes, serving sizes, prep/cook time)'
+              />
+              <br />
+              <label htmlFor='ingredient'>
+                <b>Ingredients: </b>
+              </label>
+              <br />
+              <input
+                className='input-form-styling'
+                type='text'
+                name='ingredient'
+                value={this.state.ingredient}
+                onChange={this.handleChange}
+              />{' '}
+              <button
+                type='button'
+                onClick={this.handleAddIngredient}
+                className='add-recipe-button'
+              >
+                Add Ingredient
+              </button>
+              <ol>{listIngredients}</ol>
+              <br />
+              <label htmlFor='instruction'>
+                <b>Instructions: </b>
+              </label>
+              <br />
+              <input
+                className='input-form-styling'
+                type='text'
+                name='instruction'
+                value={this.state.instruction}
+                onChange={this.handleChange}
+              />{' '}
+              <button
+                type='button'
+                onClick={this.handleAddInstructions}
+                className='add-recipe-button'
+              >
+                Add Instruction
+              </button>
+              <ol>{listInstructions}</ol>
+              <br />
+              <br />
+              <Button type='submit'>Save Recipe</Button>
+            </form>
+          </fieldset>
         </section>
       </div>
     );

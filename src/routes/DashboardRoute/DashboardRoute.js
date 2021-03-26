@@ -4,6 +4,9 @@ import DashboardContext from '../../contexts/DashboardContext';
 import SavedRecipesApiService from '../../services/saved-recipes-api-service';
 import Button from '../../components/Button/Button';
 import './DashboardRoute.css';
+import whisk from '../../components/Images/whisk.jpg';
+import ingredients from '../../components/Images/ingredients.jpg';
+import croissant from '../../components/Images/croissant.jpg';
 
 class DashboardRoute extends Component {
   static contextType = DashboardContext;
@@ -44,6 +47,44 @@ class DashboardRoute extends Component {
     });
     return (
       <div>
+        <section>
+          <div className='group'>
+            <div className='item'>
+              <img
+                className='dashboard-img'
+                src={ingredients}
+                alt='Flour, honey, eggs, and baking utensils.'
+                width='400'
+              />
+              <h3>Ingredients</h3>
+              <hr />
+              <p>Store your list of ingredients for your pastries.</p>
+            </div>
+            <div className='item'>
+              <img
+                className='dashboard-img'
+                src={whisk}
+                alt='Hand holding a whisk covered in batter.'
+                width='400'
+              />
+              <h3>Instructions</h3>
+              <hr />
+              <p>List the instructions to recreate your lovely recipes.</p>
+            </div>
+            <div className='item'>
+              <img
+                className='dashboard-img'
+                src={croissant}
+                alt='A beautifully placed croissant with sugar coated strawberries.'
+                width='400'
+              />
+              <h3>Bon Appétit</h3>
+              <hr />
+              <p>Enjoy!</p>
+            </div>
+          </div>
+        </section>
+
         <Link to='/add-recipe'>
           <Button>Add Recipe</Button>
         </Link>

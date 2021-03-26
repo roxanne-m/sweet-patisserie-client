@@ -5,11 +5,11 @@ import './LandingPage.css';
 
 class LandingPage extends Component {
   render() {
-    // const photo = require('../Images/sebastian-coman-photography-dacM7egRw0Y-unsplash.jpg');
     return (
       <div>
         <div className='container'>
           <img
+            className='landing-page-photo'
             src={pastryPhoto}
             alt='Holding a pastry in front of a pastry shop'
           />

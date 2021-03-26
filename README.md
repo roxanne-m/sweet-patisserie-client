@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Sweet Patisserie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Spaced Repetition is an app that allows users to save their beloved sweet recipes and have the ability to revist them in order to recreate the magic. Users may register, have their personalized dashboard of their previous saved recipes, delete old recipes, and upload new ones!
 
-In the project directory, you can run:
+## Link to Live App & Repos
 
-### `npm start`
+- Live App:
+  - https://sweet-patisserie-client-jzdm0fedy-roxanne-m.vercel.app/
+- Server Repo:
+  - https://github.com/roxanne-m/sweet-patisserie-server.git
+- Client Repo:
+  - https://github.com/roxanne-m/sweet-patisserie-client.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Application Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- A landing page explains the purpose of Sweet Patisserie to new and returning users.
 
-### `npm test`
+![landing](https://user-images.githubusercontent.com/70825798/112699857-f8089180-8e49-11eb-937f-a6da156c1c38.JPG)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- As a returning user, the user may login using their username and password.
+- User can register using their name, a username, and a password. The password must be 8 characters long, must contain one upper case, lower case, number, and special character.
 
-### `npm run build`
+![register](https://user-images.githubusercontent.com/70825798/112699763-c68fc600-8e49-11eb-9bff-3998dfaff9e8.JPG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Once logged in, the user will view their dashboard that contains their previously save recipes with their title, description, and a delete button.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![dashboard](https://user-images.githubusercontent.com/70825798/112699905-1e2e3180-8e4a-11eb-8f70-e8a2fe812f56.JPG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- When the user clicks ona specific recipe on their dashboard, they will be taken to the recipes page where the entirety of its information is displayed (Ex: title, description, ingredients, instructions)
 
-### `npm run eject`
+![specificRecipe](https://user-images.githubusercontent.com/70825798/112699996-5d5c8280-8e4a-11eb-8026-c5e53882b330.JPG)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- If the user wishes to create a new recipe, they may click on the "Add Recipe" button where they will be redirected to a page where they will add the title, optional description, list of ingredients, and list of instructions.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![addrecipe](https://user-images.githubusercontent.com/70825798/112700113-a7ddff00-8e4a-11eb-9c91-317bca600717.JPG)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tech Stacks Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Front-end technologies
+  - Javascript frameworks
+  - CSS grid
+  - React
+  - Deployed via Vercel
+- Back-end technologies
+  - Node.js
+  - RESTful Api
+  - Deployed via Heroku
+- Data Persistence
+  - PostgreSQL
 
-## Learn More
+## Documentation of API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Sweet Patisserie Endpoints
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Dashboard Recipes Endpoint
 
-### Code Splitting
+`GET /api/recipes` <br/>
+Provides full list of recipe titles and their descriptions saved. <br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Full Recipes Endpoint
 
-### Analyzing the Bundle Size
+`GET /api/recipes/:recipeId` <br/>
+Provides a specific recipe by its id in its entirety such as the title, description, ingredients, and instructions. <br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`POST /api/recipes/add` <br/>
+Creates new product that requires a title, ingredients, and instructions. The description is optional. <br/>
+| Key | Value |
+| ------------- | ------------- |
+| title | Text, required |
+| description | Text, optional |
+| ingredients | Text, required |
+| instructions | Text, required |
 
-### Making a Progressive Web App
+`DELETE /api/products/:product_id` <br/>
+Deletes a specific recipe by its id. <br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Setup
 
-### Advanced Configuration
+To setup the application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork and clone the project to your machine
+2. `npm install`. This will also install the application _Cypress.io_ for running browser integration tests
 
-### Deployment
+The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
 
-### `npm run build` fails to minify
+## Running project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.

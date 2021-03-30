@@ -20,9 +20,9 @@ class SpecificRecipeRoute extends Component {
   render() {
     const listOfIngredients =
       this.context.completeRecipe.ingredients &&
-      this.context.completeRecipe.ingredients.map((completeRecipe) => {
+      this.context.completeRecipe.ingredients.map((completeRecipe, index) => {
         return (
-          <li className='recipe-list-style' key={completeRecipe.id}>
+          <li className='recipe-list-style' key={index}>
             {completeRecipe.ingredients}
           </li>
         );
@@ -30,9 +30,9 @@ class SpecificRecipeRoute extends Component {
 
     const listOfInstructions =
       this.context.completeRecipe.instructions &&
-      this.context.completeRecipe.instructions.map((completeRecipe) => {
+      this.context.completeRecipe.instructions.map((completeRecipe, index) => {
         return (
-          <li className='recipe-list-style' key={completeRecipe.id}>
+          <li className='recipe-list-style' key={index}>
             {completeRecipe.instructions}
           </li>
         );

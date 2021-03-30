@@ -41,7 +41,7 @@ export class DashboardProvider extends Component {
 
   deleteRecipe = (recipeId) => {
     this.setRecipes(
-      this.state.recipes.filter((recipe) => recipe.id !== recipeId)
+      this.state.recipes.filter((recipe) => recipe.new_recipe_id !== recipeId)
     );
   };
 

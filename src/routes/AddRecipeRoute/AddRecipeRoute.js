@@ -64,7 +64,7 @@ class AddRecipeRoute extends Component {
       this.state.ingredients,
       this.state.instructions
     ).then((res) => {
-      const path = `/recipe/${res.recipe.id}`;
+      const path = `/recipe/${res.recipe.new_recipe_id}`;
       this.props.history.push(path);
     });
   };

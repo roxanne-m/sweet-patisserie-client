@@ -27,8 +27,8 @@ class DashboardRoute extends Component {
   render() {
     const recipesArray = this.context.recipes.map((recipe) => {
       return (
-        <li className='recipe-list-style' key={recipe.id}>
-          <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
+        <li className='recipe-list-style' key={recipe.new_recipe_id}>
+          <Link key={recipe.id} to={`/recipe/${recipe.new_recipe_id}`}>
             <h3>
               <u>{recipe.title}</u>
             </h3>
@@ -38,7 +38,7 @@ class DashboardRoute extends Component {
           <br />
           <button
             className='delete-button'
-            onClick={(e) => this.handleDeleteSubmit(e, recipe.id)}
+            onClick={(e) => this.handleDeleteSubmit(e, recipe.new_recipe_id)}
           >
             Delete Recipe
           </button>

@@ -56,7 +56,7 @@ class DashboardRoute extends Component {
                 alt='Flour, honey, eggs, and baking utensils.'
                 width='400'
               />
-              <h3>Ingredients</h3>
+              <h2>Ingredients</h2>
               <hr />
               <p>Store your list of ingredients for your pastries.</p>
             </div>
@@ -67,7 +67,7 @@ class DashboardRoute extends Component {
                 alt='Hand holding a whisk covered in batter.'
                 width='400'
               />
-              <h3>Instructions</h3>
+              <h2>Instructions</h2>
               <hr />
               <p>List the instructions to recreate your lovely recipes.</p>
             </div>
@@ -78,15 +78,15 @@ class DashboardRoute extends Component {
                 alt='A beautifully placed croissant with sugar coated strawberries.'
                 width='400'
               />
-              <h3>Bon Appétit</h3>
+              <h2>Bon Appétit</h2>
               <hr />
               <p>Enjoy!</p>
             </div>
           </div>
         </section>
 
-        <Link to='/add-recipe'>
-          <Button>Add Recipe</Button>
+        <Link to='/add-recipe' className='add-recipe-link-button'>
+          Add Recipe
         </Link>
         <h2>Recipe Dashboard</h2>
         <section>

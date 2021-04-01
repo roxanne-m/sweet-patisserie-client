@@ -51,10 +51,24 @@ img {
   border-radius: 20px;
 }
 
+.sign-up-link {
+  color: white;
+  background-color: #0096c7;
+  font-size: 18px;
+  padding: 8px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* Desktop Styling */
 @media all and (min-width: 800px) {
   .landing-page-photo {
-    width: 100%;
-    height: auto;
+    max-height: 500px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }

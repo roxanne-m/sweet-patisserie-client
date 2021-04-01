@@ -6,24 +6,34 @@ li {
   border: 2px solid none;
   border-radius: 20px;
   background-color: #ffc6cf;
-  /* background-color: #f7d6e0; */
   margin: 10px;
   padding: 10px;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .delete-button {
   color: white;
-  background-color: red;
-  font-size: 15px;
+  background-color: #0096c7;
+  font-size: 18px;
   padding: 8px 15px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
-  float: inline-end;
+  /* float: inline-end; */
 }
 
+.add-recipe-link-button {
+  color: white;
+  background-color: #0096c7;
+  font-size: 18px;
+  padding: 8px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
 /* Images */
 .dashboard-img {
   width: 100%;

@@ -53,6 +53,11 @@ class LandingPage extends Component {
               enjoy them.
             </p>
             <p>XoXo, Sweet Patisserie</p>
+            <p>
+              <Link to='/register' className='sign-up-link'>
+                Sign Up!
+              </Link>
+            </p>
           </div>
         </div>
       </div>

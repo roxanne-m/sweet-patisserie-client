@@ -87,8 +87,8 @@ class AddRecipeRoute extends Component {
 
     return (
       <div>
-        <Link to='/dashboard'>
-          <Button>Cancel</Button>
+        <Link to='/dashboard' className='cancel-button'>
+          Cancel
         </Link>
 
         <h2>Add A New Recipe</h2>
@@ -103,6 +103,7 @@ class AddRecipeRoute extends Component {
                 className='input-form-styling'
                 type='text'
                 name='title'
+                id='title'
                 value={this.state.title}
                 onChange={this.handleChange}
                 required
@@ -115,6 +116,7 @@ class AddRecipeRoute extends Component {
               <textarea
                 className='textarea-form-styling'
                 name='description'
+                id='description'
                 value={this.state.description}
                 onChange={this.handleChange}
                 rows='10'
@@ -130,6 +132,7 @@ class AddRecipeRoute extends Component {
                 className='input-form-styling'
                 type='text'
                 name='ingredient'
+                id='ingredient'
                 value={this.state.ingredient}
                 onChange={this.handleChange}
               />{' '}
@@ -150,6 +153,7 @@ class AddRecipeRoute extends Component {
                 className='input-form-styling'
                 type='text'
                 name='instruction'
+                id='instruction'
                 value={this.state.instruction}
                 onChange={this.handleChange}
               />{' '}

@@ -81,7 +81,7 @@ class RegistrationForm extends Component {
           />
         </div>
         <div>
-          <Button type='submit'>Sign up</Button>{' '}
+          <Button type='submit'>Sign up</Button> <br />
           <Link to='/login'>Already have an account?</Link>
         </div>
       </form>

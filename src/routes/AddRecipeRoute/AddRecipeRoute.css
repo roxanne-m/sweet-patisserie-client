@@ -1,7 +1,7 @@
 .add-recipe-button {
   color: white;
   background-color: green;
-  font-size: 12px;
+  font-size: 18px;
   padding: 8px 8px;
   border: none;
   cursor: pointer;
@@ -26,8 +26,25 @@
   margin: 50px;
 }
 
+.cancel-button {
+  color: white;
+  background-color: #0096c7;
+  font-size: 18px;
+  padding: 8px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
 @media all and (min-width: 800px) {
   .add-recipe-list {
     margin: 80px;
+  }
+}
+
+@media all and (max-width: 370px) {
+  .add-recipe-form {
+    margin: 5px;
   }
 }

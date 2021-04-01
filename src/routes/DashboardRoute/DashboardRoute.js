@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import DashboardContext from '../../contexts/DashboardContext';
 import SavedRecipesApiService from '../../services/saved-recipes-api-service';
-import Button from '../../components/Button/Button';
 import './DashboardRoute.css';
 import whisk from '../../components/Images/whisk.jpg';
 import ingredients from '../../components/Images/ingredients.jpg';
